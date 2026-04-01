@@ -9,10 +9,6 @@
 Este laboratório de desafio demonstra a implantação de uma aplicação web simples utilizando os principais serviços de infraestrutura da AWS. O objetivo foi colocar em prática os conceitos de computação em nuvem, redes virtuais e segurança aprendidos no programa re/Start.
 
 ---
-##  Arquitetura
-
-![Arquitetura AWS EC2 Web Server](architecture/aws-ec2-architecture.png)
-
 ### Fluxo da arquitetura
 
 1. **Internet**  
@@ -102,11 +98,20 @@ chmod 777 /var/www/html
 
 ## Implantação da Página Web
 
+### 1. Verificar o Apache
+
 Após acessar a instância via SSH com **PuTTY**, foi feita a validação do serviço Apache:
 
 ```bash
 sudo systemctl status httpd
+```
 
+### 2. Criar a página HTML
+```bash
+nano projects.html
+```
+
+```
 # Criando a página HTML
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -231,16 +236,20 @@ sudo systemctl status httpd
 
 </body>
 </html>
-EOF
+```
 
-# Criação da página HTML diretamente na instância
-nano projects.html
+ O CSS completo está disponível no arquivo [`projects.html`](projects.html) deste repositório.
 
-# Implantação da aplicação no diretório do servidor web
+
+### 3. Mover para o servidor web
+```bash
 sudo mv projects.html /var/www/html/
 ```
-Acesso via: `http://<IPv4-público>/projects.html`
 
+Acesse no navegador:
+```
+http://<IPv4-público>/projects.html
+```
 ---
 
 
