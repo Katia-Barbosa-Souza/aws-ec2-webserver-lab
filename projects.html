@@ -1,0 +1,47 @@
+## Código da Página Web (projects.html) 
+A página HTML foi criada diretamente na instância EC2 via SSH, utilizando o PuTTY como cliente de acesso remoto.
+
+A aplicação foi utilizada para validar o funcionamento do servidor web Apache, apresentando uma interface simples com estilização básica, layout centralizado e cores escuras, focada na organização visual e clareza das informações.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 Web Server | Katia Souza</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1633;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 520px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 Katia Souza</h1>
+    <h2>AWS EC2 Web Server Deployment</h2>
+
+    <p>Aplicação web hospedada em uma instância Amazon EC2.</p>
+    <p>Servidor Apache configurado com sucesso.</p>
+
+</div>
+
+</body>
+</html>
